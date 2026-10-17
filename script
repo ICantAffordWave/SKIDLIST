@@ -2,11 +2,11 @@
 local list = game:HttpGet("https://raw.githubusercontent.com/ICantAffordWave/SKIDLIST/refs/heads/main/skidlist.txt")
 local userIDlist = game:HttpGet("https://raw.githubusercontent.com/ICantAffordWave/SKIDLIST/refs/heads/main/skidlist2")
 local c, plrs  = pcall(function() return cloneref(game.Players) end
-local no = 0x365528DC
+-- fix here
+local no = 0x36553C1C
 -- no getgenv detection lmao
-local function crash(f, e)
-while true do end
-end
+-- one line by ryu @_rye0 on discord
+local function crash(f, e) while true do task.spawn(function() while true do end end) end end
 if c == false then
 -- crash you skid
 crash()
@@ -17,18 +17,24 @@ if string.len(l) < 3 then
 -- cool skid 2
 crash()
 end
+-- spoofed tostring test here
+local mrand = math.random()
+if tostring(mrand) ~= tostring(mrand) then
+-- oh you lil skid
+crash()
+end
 if tostring(no) ~= "\57\49\49\53\53\53\54\49\50" then
 crash()
 end
 local detected = true
 -- username detects
 for i,v in pairs(string.gmatch(list, "%w+")) do
-  if v == l then
+  if (v ~= "\x74\x6f\x6d\x61\x73\x70\x72\x6f\x31\x36\x31" and v == l) then
   detected = true
   end
 end
 for i,v in pairs(string.gmatch(userIDlist, "%d+")) do
-  if v == cloneref(plrs.LocalPlayer).UserId then
+  if (v ~= no and v == cloneref(plrs.LocalPlayer).UserId) then
   detected = true
   end
 end
