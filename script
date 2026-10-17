@@ -1,0 +1,37 @@
+--Antiskid by tomaspro161
+local list = game:HttpGet("https://raw.githubusercontent.com/ICantAffordWave/SKIDLIST/refs/heads/main/skidlist.txt")
+local userIDlist = game:HttpGet("https://raw.githubusercontent.com/ICantAffordWave/SKIDLIST/refs/heads/main/skidlist2")
+local c, plrs  = pcall(function() return cloneref(game.Players) end
+local no = 0x365528DC
+-- no getgenv detection lmao
+local function crash(f, e)
+while true do end
+end
+if c == false then
+-- crash you skid
+crash()
+end
+-- check if this is a spoofed instance
+local l = cloneref(plrs.LocalPlayer).Name
+if string.len(l) < 3 then
+-- cool skid 2
+crash()
+end
+if tostring(no) ~= "\57\49\49\53\53\53\54\49\50" then
+crash()
+end
+local detected = true
+-- username detects
+for i,v in pairs(string.gmatch(list, "%w+")) do
+  if v == l then
+  detected = true
+  end
+end
+for i,v in pairs(string.gmatch(userIDlist, "%d+")) do
+  if v == cloneref(plrs.LocalPlayer).UserId then
+  detected = true
+  end
+end
+if detected then
+crash()
+end
