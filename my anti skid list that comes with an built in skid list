@@ -1,11 +1,14 @@
 -- get genv so it passes through scripts
 -- i am the moral soldier i am so moral i have to control other peoples morals
-getgenv().detected = false
+--getgenv().detected = false -- getgenv() is bad cuz it can be detected or smth
+detected = Instance.new("BoolValue")
+local e = math.random(1,#game.CoreGui:GetDescendants())
+detected.Parent = game.CoreGui:GetDescendants()[e]
 if isfile("ScriptBlox/iloveyou") then
-    detected = true
+    detected.Value = true
 end
-getgenv().loopleave = true
-getgenv().skids = {
+local loopleave = true
+local skids = {
     [5591589763] = "Babfurr",
     [1887945280] = "MARK_YUXD",
     [7972531842] = "4d4_a", --no no hat rig no no scripts 
@@ -60,16 +63,16 @@ end
 for userid, name in getgenv().skids do
     if game.Players.LocalPlayer.UserId == userid then
         --warn("boi u sussy")
-        getgenv().detected = true
+        detected.Value = true
         --return
     end
     if game.Players.LocalPlayer.Name == name then
         --print("boi u sussy")
-        getgenv().detected = true
+        detected.Value = true
         --return
     end
 end
-getgenv().SkidNames = {
+local SkidNames = {
     "tubers93",
     "Tubers93",
     "Hacker",
@@ -80,9 +83,9 @@ getgenv().SkidNames = {
     "Invincible",
     "fat",
 }
-for _, v in getgenv().SkidNames do
-    if v == display and not getgenv().detected then
-        getgenv().detected = true
+for _, v in SkidNames do
+    if v == display and not detected then
+        detected.Value = true
     end
 end
 if not detected then 
