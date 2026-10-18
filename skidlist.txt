@@ -1,1 +1,17 @@
-radio_5854,Revolutionphoton
+-- get genv so it passes through scripts
+getgenv().skids = {
+    [5591589763] = "Babfurr",
+    [1887945280] = "MARK_YUXD",
+    -- bad gooners no no ^^^^
+    [11085677322] = "shipa_593",
+    [11240583602] = "Revolutionphoton",
+}
+-- example code or you can just go ahead and paste it i dont care
+for userid, name in skids do
+    if game.Players.LocalPlayer.UserId == tonumber(userid) then
+        warn("boi u sussy")
+    end
+    if game.Players.LocalPlayer.Name == name then
+        print("boi u sussy")
+    end
+end
