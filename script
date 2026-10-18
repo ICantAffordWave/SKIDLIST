@@ -127,7 +127,6 @@ local SkidNames = {
     "coolkidd",
     "c00lkidd",
     "Invincible",
-    "fat",
 }
 local display = cloneref(game:GetService("Players").LocalPlayer).DisplayName
 for i, v in SkidNames do
