@@ -60,7 +60,7 @@ local function displey(name)
     end
 end
 -- example code or you can just go ahead and paste it i dont care
-for userid, name in getgenv().skids do
+for userid, name in skids do
     if game.Players.LocalPlayer.UserId == userid then
         --warn("boi u sussy")
         detected.Value = true
