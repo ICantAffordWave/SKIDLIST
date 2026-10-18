@@ -1,6 +1,15 @@
---Antiskid by tomaspro161
-local list = game:HttpGet("https://raw.githubusercontent.com/ICantAffordWave/SKIDLIST/refs/heads/main/skidlist.txt")
-local userIDlist = game:HttpGet("https://raw.githubusercontent.com/ICantAffordWave/SKIDLIST/refs/heads/main/skidlist2")
+-- Antiskid by tomaspro161 (or tomasxd16 on DC)
+-- This will be forever opensource.
+-- below was made by @audio4life on discord (botsl)
+local skids = {
+    [5591589763] = "Babfurr",
+    [1887945280] = "MARK_YUXD",
+    -- bad gooners no no ^^^^
+    [11085677322] = "shipa_593",
+    [11240583602] = "Revolutionphoton",
+}
+-- all httpgets here are gone (if you want to add a skid yourself, do a issue AND IT SHOULD HAVE THE USERID AND NAME!!) 
+-- or pull request (keep this code and add it yourself, NO OBFUSCATED CODE unless i obfuscate it and you should also check if it works)
 local c, plrs  = pcall(function() return cloneref(game.Players) end)
 -- fix here
 local no = 0x36553C1C
@@ -48,18 +57,19 @@ end
 end
 local detected = false
 -- username detects
-for i,v in string.gmatch(list, "%w+") do
-  if (v == l) then
+-- check for getgenv
+local plr = cloneref(game:GetService("Players").LocalPlayer)
+local uid = plr.UserId
+for id,name in pairs(skids) do
+-- don't trust a lot names but ok 
+  if (id == uid ) or (name == l) then
   detected = true
-  end
-end
-for i,v in string.gmatch(userIDlist, "%d+") do
-  if (v == cloneref(plrs.LocalPlayer).UserId) then
-  detected = true
+-- uh oh skid
+   break
   end
 end
 if detected then
-warn("detected")
+warn("detected lmao goodbai")
 if manual then
  while true do task.spawn(function() while true do end end) end
 else
