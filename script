@@ -49,6 +49,7 @@ local skids = {
 	[11328499525] = "ghetrobloxvng99999",
 	[2797565668] = "SonicEditzz", -- a addition by @_rye0 on botsl's discord
 	[9339752902] = "oldhacfard", -- skidder, skidded myworld limb reanimate
+    [11150442244] = "santiagolololo6", -- good skid, i know you're helping people in zombie game but you abuse RejectCharacterDeletions..
 }
 -- all httpgets here are gone (if you want to add a skid yourself, do a issue AND IT SHOULD HAVE THE USERID AND NAME!!) 
 -- or pull request (keep this code and add it yourself, NO OBFUSCATED CODE unless i obfuscate it and you should also check if it works)
