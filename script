@@ -1,6 +1,8 @@
--- Antiskid by tomaspro161 (or tomasxd16 on DC)
--- This will be forever opensource.
--- below was made by @audio4life on discord (botsl)
+--[[
+ Antiskid by tomaspro161 (or tomasxd16 on DC)
+ This will be forever opensource.
+ below was made by @audio4life on discord (botsl)
+--]]
 local skids = {
      [5591589763] = "Babfurr",
     [1887945280] = "MARK_YUXD",
