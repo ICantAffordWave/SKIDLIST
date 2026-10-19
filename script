@@ -3,6 +3,7 @@
  This will be forever opensource.
  below was made by @audio4life on discord (botsl)
 --]]
+local timel = os.clock()
 local skids = {
 	[5591589763] = "Babfurr",
 	[1887945280] = "MARK_YUXD",
@@ -136,6 +137,7 @@ local display = cloneref(game:GetService("Players").LocalPlayer).DisplayName
 for i, v in SkidNames do
 	if v == display and not detected then
 		detected = true
+        break
 	end
 end
 -- username detects
@@ -150,6 +152,7 @@ for id,name in pairs(skids) do
 		break
 	end
 end
+warn("took "..os.clock() - timel.." secounds")
 if detected then
 	warn("no")
 	-- warn("detected lmao goodbai")
