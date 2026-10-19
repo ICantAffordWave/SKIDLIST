@@ -151,6 +151,7 @@ for id,name in pairs(skids) do
 	end
 end
 if detected then
+	warn("no")
 	-- warn("detected lmao goodbai")
 	if manual then
 		-- very evil shit
@@ -158,4 +159,6 @@ if detected then
 	else
 		crash()
 	end
+else
+	warn("epik")
 end
