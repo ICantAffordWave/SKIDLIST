@@ -44,6 +44,8 @@ local skids = {
     [11027539317] = "booood_67",
     [8770175643] = "loshok_30089r2akkoff",
     [11328499525] = "ghetrobloxvng99999",
+    [2797565668] = "SonicEditzz", -- a addition by @_rye0 on botsl's discord
+    [9339752902] = "oldhacfard", -- skidder, skidded myworld limb reanimate
 }
 -- all httpgets here are gone (if you want to add a skid yourself, do a issue AND IT SHOULD HAVE THE USERID AND NAME!!) 
 -- or pull request (keep this code and add it yourself, NO OBFUSCATED CODE unless i obfuscate it and you should also check if it works)
@@ -127,6 +129,7 @@ local SkidNames = {
     "coolkidd",
     "c00lkidd",
     "Invincible",
+    "oldhacfard", -- incase cuz i see you have alts
 }
 local display = cloneref(game:GetService("Players").LocalPlayer).DisplayName
 for i, v in SkidNames do
